@@ -1,0 +1,107 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:linear-gradient(135deg,#eef2ff,#f8fafc);
+    margin:0;
+    padding:0;
+}
+
+.container{
+    max-width:900px;
+    margin:auto;
+}
+
+h1{
+    text-align:center;
+    color:#1e293b;
+    margin-bottom:10px;
+}
+
+.container > p{
+    text-align:center;
+    color:#475569;
+    margin-bottom:25px;
+}
+
+.card{
+    background:white;
+    padding:22px;
+    margin-bottom:20px;
+    border-radius:14px;
+    box-shadow:0 8px 25px rgba(0,0,0,0.08);
+}
+
+.card h2{
+    margin-bottom:15px;
+    color:#0f172a;
+}
+
+input, select{
+    width:100%;
+    padding:12px;
+    margin-bottom:12px;
+    border:1px solid #cbd5e1;
+    border-radius:8px;
+    font-size:15px;
+}
+
+button{
+    background:#2563eb;
+    color:white;
+    border:none;
+    padding:13px 22px;
+    border-radius:8px;
+    cursor:pointer;
+    margin:8px 5px 15px 0;
+    font-size:15px;
+    font-weight:bold;
+}
+
+button:hover{
+    background:#1d4ed8;
+}
+
+.result h3{
+    color:#16a34a;
+    margin-top:10px;
+}
+
+#qrBox{
+    display:none;
+    text-align:center;
+}
+
+#qrImage{
+    margin-top:10px;
+    border:8px solid white;
+    box-shadow:0 4px 12px rgba(0,0,0,0.15);
+}
+
+a button{
+    background:#111827;
+}
+
+a button:hover{
+    background:#000;
+}
+.welcome{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    min-height:80vh;
+}
+
+.welcome h1{
+    margin-bottom:20px;
+}
+
+.welcome p{
+    margin-bottom:25px;
+}

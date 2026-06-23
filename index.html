@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Smart Invoice + GST Calculator</title>
+    <link rel="stylesheet" href="style.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <h1><i class="fa-solid fa-file-invoice-dollar"></i> Smart Invoice + GST Calculator</h1>
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/3135/3135706.png">
+</head>
+
+<body>
+
+<div class="container">
+
+    <section id="welcomeSection" class="card welcome">
+    
+        <p>Create GST invoice with discount, late fee, PDF export and UPI QR.</p>
+        <button onclick="showForm()">Start Creating Invoice</button>
+    </section>
+
+    <section id="formSection" style="display:none;">
+        <h1>Invoice Details</h1>
+
+        <div class="card">
+            <h2>Business Details</h2>
+            <input type="text" id="businessName" placeholder="Your Business Name">
+            <input type="text" id="clientName" placeholder="Client Name">
+            <input type="text" id="upiId" placeholder="Your UPI ID (example: name@upi)">
+            <input type="text" id="payeeName" placeholder="Payee Name">
+        </div>
+
+        <div class="card">
+            <h2>Product / Service Details</h2>
+            <input type="text" id="itemName" placeholder="Product / Service Name">
+            <input type="number" id="quantity" placeholder="Quantity">
+            <input type="number" id="price" placeholder="Price per item">
+            <button type="button" onclick="addProduct()">
+            Add Product
+           </button>
+
+            <div id="productList"></div>
+            <input type="number" id="discount" placeholder="Discount %">
+            <select id="gst">
+                <option value="5">GST 5%</option>
+                <option value="12">GST 12%</option>
+                <option value="18" selected>GST 18%</option>
+                <option value="28">GST 28%</option>
+            </select>
+            <input type="number" id="lateFee" placeholder="Late Fee">
+        </div>
+
+        <button onclick="calculateInvoice()">Calculate Invoice</button>
+    </section>
+
+    <section id="resultSection" style="display:none;">
+        <div class="card result" id="result"></div>
+
+        <div class="card" id="qrBox">
+            <h2>UPI Payment QR</h2>
+            <img id="qrImage" src="" alt="UPI QR Code">
+        </div>
+
+        <button onclick="downloadPDF()">Download Invoice PDF</button>
+        <button onclick="goBack()">Edit Details</button>
+
+        <p><strong>Komal Lamba</strong></p>
+        <p>komallamba993@gmail.com</p>
+
+        <a href="https://digitalheroesco.com" target="_blank">
+            <button>Built for Digital Heroes</button>
+        </a>
+    </section>
+
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
